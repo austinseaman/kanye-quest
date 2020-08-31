@@ -1,7 +1,7 @@
 import React from 'react';
-import Quest from './Quest'
-import Kanye1 from './assets/kanye1.PNG'
-import Kanye2 from './assets/kanye2.PNG'
+import Quest from './Quest';
+import Footer from './Footer';
+import Kanye1 from './assets/kanye1.PNG';
 import './App.css';
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <img src={Kanye1} alt="kanye-head-one"/>
       <Quest />
+      <Footer />
     </div>
   );
 }

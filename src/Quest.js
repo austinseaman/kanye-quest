@@ -1,7 +1,24 @@
-import React, { Component} from 'react'
-import axios from 'axios'
+import React, { useState } from 'react';
+import axios from 'axios';
 
 const Quest = () => {
+    const [quoteState, setQuoteState] = useState({
+        quoteData: []
+    })
+
+    const generateQuote = () => {
+        axios.get('https://api.kanye.rest')
+            .then(res => {
+                setQuoteState(() => ({
+                    quoteData: res.data
+                }))
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    const theQuote = quoteState.quoteData.quote
 
     return (
         <div className="kanye-quest">
@@ -21,9 +38,12 @@ const Quest = () => {
             Kanye rest, he could not do his Kanye best.
             <br />
             <br />
-            Our champion now, all Kanye stressed, sayeth he, one Kanye West:
+            Our champion now, all Kanye stressed, sayeth he, one Kanye West: 
             </p>
-            <h1></h1>
+            <br/>
+            <h1 className="quote">{theQuote}</h1>
+            <br/>
+            <button onClick={generateQuote} className="btn">Y O L O</button>
         </div>
     )
 }

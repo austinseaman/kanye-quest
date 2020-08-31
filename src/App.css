@@ -33,3 +33,86 @@ body {
 .kanye-quest p {
   text-align: center;
 }
+
+.quote {
+  color: aqua;
+  font-size: 48px;
+}
+
+.btn {
+  --text-color-normal: black;
+  --text-color-hover: aqua;
+  --border-radius: 0;
+  --border-color-normal: black;
+  --border-color-hover: #F7F7F5;
+
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 100%;
+  font-size: 14px;
+  line-height: 34px;
+  letter-spacing: -.025em;
+  word-spacing: -.05em;
+  transition: .5s;
+  text-align: center;
+  cursor: pointer;
+  margin: 20px auto;
+  background: whitesmoke;
+  border: 1px solid var(--border-color-normal);
+  border-radius: var(--border-radius); 
+  color: var(--text-color-normal);
+  font-family: 'Lexend Tera', sans-serif;
+}
+
+.btn:focus {
+  color: var(--text-color-hover);
+  outline: 1px solid var(--border-color-hover);
+}
+
+.btn:before,
+.btn:after {
+  position: absolute;
+  content: "";
+  left: -1px;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  box-sizing: border-box;
+  z-index: 11;
+  transform: scale(0);
+  transition: .5s;
+  border-radius: var(--border-radius); 
+}
+
+.btn:before {
+  border-bottom: 1px solid var(--border-color-hover);
+  border-left: 1px solid var(--border-color-hover);
+  transform-origin: 0 100%;
+}
+
+.btn:after {
+  border-top: 1px solid var(--border-color-hover);
+  border-right: 1px solid var(--border-color-hover);
+  transform-origin: 100% 0;
+}
+
+.btn:hover {
+  color: var(--text-color-hover);
+  background-color: #020204
+}
+
+.btn:hover:before,
+.btn:hover:after {
+transform: scale(1);
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+}
+
+.footer a {
+  color: aqua;
+  text-decoration: none;
+}
