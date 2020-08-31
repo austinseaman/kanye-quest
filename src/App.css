@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
+* {
+  margin: 0;
+}
+
 body {
   background-color: magenta;
 }
@@ -20,6 +24,10 @@ body {
   justify-content: center;
   font-family: 'Alata', sans-serif;
   color: whitesmoke;
+}
+
+.kanye-quest h2 {
+  font-weight: bold;
 }
 
 .kanye-quest p {

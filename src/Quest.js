@@ -6,8 +6,6 @@ const Quest = () => {
     return (
         <div className="kanye-quest">
             <h2>I bid you come closer, fellow web traveler..</h2>
-            <br/>
-            
             <p>There was a man named Kanye West, who was put to the Kanye test.
             <br />
             "You must grab a bird from Kanye nest, and bring it to our Kanye fest!"
